@@ -1,0 +1,13 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:item_texture": {
+        "texture_data": {
+            "thread_of_resonance": {
+                "textures": "textures/items/thread_of_resonance"
+            },
+            "source_crystal": {
+                "textures": "textures/items/source_crystal"
+            }
+        }
+    }
+}

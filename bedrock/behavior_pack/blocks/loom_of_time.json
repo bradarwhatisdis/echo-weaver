@@ -1,0 +1,28 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "echoweaver:loom_of_time"
+        },
+        "components": {
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 3.0
+            },
+            "minecraft:destructible_by_explosion": {
+                "explosion_resistance": 6.0
+            },
+            "minecraft:map_color": "#3366aa",
+            "minecraft:loot": "loot_tables/blocks/loom_of_time.json",
+            "minecraft:geometry": "geometry.echoweaver.loom_of_time",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "loom_of_time",
+                    "render_method": "opaque"
+                }
+            },
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 8,
+            "minecraft:rotation": ["minecraft:rotation_axis_aligned"]
+        }
+    }
+}

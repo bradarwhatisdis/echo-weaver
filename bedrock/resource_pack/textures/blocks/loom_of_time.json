@@ -1,0 +1,10 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:texture": {
+        "texture_data": {
+            "loom_of_time": {
+                "textures": "textures/blocks/loom_of_time"
+            }
+        }
+    }
+}

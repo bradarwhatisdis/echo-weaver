@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:loot_table": {
+        "type": "block",
+        "pools": [
+            {
+                "rolls": 1,
+                "entries": [
+                    {
+                        "type": "item",
+                        "name": "echoweaver:loom_of_time",
+                        "weight": 1
+                    }
+                ]
+            }
+        ]
+    }
+}

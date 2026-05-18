@@ -1,0 +1,21 @@
+{
+    "format_version": "1.21.0",
+    "sound_definitions": {
+        "loom_weave": {
+            "category": "block",
+            "sounds": ["sounds/loom_weave"]
+        },
+        "echo_activate": {
+            "category": "entity",
+            "sounds": ["sounds/echo_activate"]
+        },
+        "echo_fade": {
+            "category": "entity",
+            "sounds": ["sounds/echo_fade"]
+        },
+        "resonance_ambient": {
+            "category": "ambient",
+            "sounds": ["sounds/resonance_ambient"]
+        }
+    }
+}

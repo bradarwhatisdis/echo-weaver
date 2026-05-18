@@ -1,0 +1,28 @@
+{
+    "format_version": "1.21.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "echoweaver:echo",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/echo"
+            },
+            "geometry": {
+                "default": "geometry.echoweaver.echo"
+            },
+            "scripts": {
+                "animate": ["idle"]
+            },
+            "animations": {
+                "idle": "animation.echoweaver.echo.idle"
+            },
+            "render_controllers": ["controller.render.default"],
+            "spawn_egg": {
+                "base_color": "#3366cc",
+                "overlay_color": "#88ccff"
+            }
+        }
+    }
+}
