@@ -1,0 +1,24 @@
+# Java / Gradle
+java/.gradle/
+java/build/
+java/bin/
+java/.settings/
+java/.project
+java/.classpath
+*.jar
+*.zip
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+/tmp/

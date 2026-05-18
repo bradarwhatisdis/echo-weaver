@@ -1,0 +1,26 @@
+{
+    "schemaVersion": 1,
+    "id": "echoweaver",
+    "version": "${version}",
+    "name": "Echo Weaver",
+    "description": "Temporal/spatial duplication mechanic - record and replay actions via Echoes",
+    "authors": [],
+    "contact": {
+        "homepage": "https://github.com/bradarwhatisdis/echo-weaver",
+        "sources": "https://github.com/bradarwhatisdis/echo-weaver"
+    },
+    "license": "MIT",
+    "icon": "assets/echoweaver/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": ["com.echoweaver.EchoWeaver"],
+        "client": ["com.echoweaver.EchoWeaverClient"]
+    },
+    "mixins": ["echoweaver.mixins.json"],
+    "depends": {
+        "fabricloader": ">=${loader_version}",
+        "minecraft": "${minecraft_version}",
+        "java": ">=21",
+        "fabric-api": "*"
+    }
+}
