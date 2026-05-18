@@ -11,10 +11,9 @@ public class ModEntities {
     public static final EntityType<EchoEntity> ECHO = Registry.register(
             Registries.ENTITY_TYPE,
             Identifier.of(EchoWeaver.MOD_ID, "echo"),
-            EntityType.Builder.create(EchoEntity::new, SpawnGroup.MISC)
+            EntityType.Builder.<EchoEntity>create(EchoEntity::new, SpawnGroup.MISC)
                     .dimensions(0.6f, 1.8f)
-                    .maxTrackingRange(10)
-                    .build()
+                    .build("Echo")
     );
 
     public static void initialize() {
