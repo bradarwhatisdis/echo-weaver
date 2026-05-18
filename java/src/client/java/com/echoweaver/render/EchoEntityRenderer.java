@@ -22,11 +22,6 @@ public class EchoEntityRenderer extends EntityRenderer<EchoEntity, EntityRenderS
     }
 
     @Override
-    public Identifier getTexture(EntityRenderState state) {
-        return TEXTURE;
-    }
-
-    @Override
     public void render(EntityRenderState state, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
         super.render(state, matrices, vertexConsumers, light);
     }
