@@ -13,7 +13,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 
 public class EchoEntity extends MobEntity {
-    private static final TrackedData<Integer> ECHO_COLOR = DataTracker.registerData(EchoEntity.class, TrackedDataHandlerRegistry.INTEGER);
+    public static final TrackedData<Integer> ECHO_COLOR = DataTracker.registerData(EchoEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Integer> TIME_LEFT = DataTracker.registerData(EchoEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
     private EchoRecording recording;
