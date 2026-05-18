@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": "First Recording",
+        "description": "Create your first Echo recording",
+        "icon": {
+            "id": "echoweaver:thread_of_resonance"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "echoweaver:root",
+    "criteria": {
+        "recorded": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": "Echo Weaver",
+        "description": "Weave the fabric of time and space",
+        "icon": {
+            "id": "echoweaver:loom_of_time"
+        },
+        "background": "minecraft:textures/block/end_stone.png",
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "got_loom": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": ["echoweaver:loom_of_time"]
+                    }
+                ]
+            }
+        }
+    }
+}

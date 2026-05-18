@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": "Echoes of the Past",
+        "description": "Spawn an Echo entity from a recording",
+        "icon": {
+            "id": "echoweaver:source_crystal"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    "parent": "echoweaver:record_first_echo",
+    "criteria": {
+        "spawned": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
