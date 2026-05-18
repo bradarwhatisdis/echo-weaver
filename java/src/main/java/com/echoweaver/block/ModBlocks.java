@@ -20,7 +20,7 @@ public class ModBlocks {
             Registry.register(
                     Registries.BLOCK_ENTITY_TYPE,
                     Identifier.of(EchoWeaver.MOD_ID, "loom_of_time"),
-                    BlockEntityType.Builder.<LoomOfTimeBlockEntity>create(LoomOfTimeBlockEntity::new, LOOM_OF_TIME).build()
+                    BlockEntityType.Builder.<LoomOfTimeBlockEntity>of(LoomOfTimeBlockEntity::new, LOOM_OF_TIME).build()
             );
 
     private static Block register(String name, Block block) {
