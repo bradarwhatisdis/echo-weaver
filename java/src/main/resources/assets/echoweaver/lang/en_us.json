@@ -1,0 +1,11 @@
+{
+    "item.echoweaver.thread_of_resonance": "Thread of Resonance",
+    "item.echoweaver.source_crystal": "Source Crystal",
+    "block.echoweaver.loom_of_time": "Loom of Time",
+    "entity.echoweaver.echo": "Echo",
+    "container.echoweaver.loom_of_time": "Loom of Time",
+    "subtitles.echoweaver.loom_weave": "Loom weaves",
+    "subtitles.echoweaver.echo_activate": "Echo awakens",
+    "subtitles.echoweaver.echo_fade": "Echo fades",
+    "subtitles.echoweaver.resonance_ambient": "Resonance hums"
+}

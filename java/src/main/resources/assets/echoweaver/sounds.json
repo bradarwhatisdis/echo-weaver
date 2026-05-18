@@ -1,0 +1,18 @@
+{
+    "loom_weave": {
+        "subtitle": "subtitles.echoweaver.loom_weave",
+        "sounds": ["echoweaver:loom_weave"]
+    },
+    "echo_activate": {
+        "subtitle": "subtitles.echoweaver.echo_activate",
+        "sounds": ["echoweaver:echo_activate"]
+    },
+    "echo_fade": {
+        "subtitle": "subtitles.echoweaver.echo_fade",
+        "sounds": ["echoweaver:echo_fade"]
+    },
+    "resonance_ambient": {
+        "subtitle": "subtitles.echoweaver.resonance_ambient",
+        "sounds": ["echoweaver:resonance_ambient"]
+    }
+}
