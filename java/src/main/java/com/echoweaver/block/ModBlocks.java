@@ -3,6 +3,7 @@ package com.echoweaver.block;
 import com.echoweaver.EchoWeaver;
 import com.echoweaver.block.entity.LoomOfTimeBlockEntity;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -20,7 +21,7 @@ public class ModBlocks {
             Registry.register(
                     Registries.BLOCK_ENTITY_TYPE,
                     Identifier.of(EchoWeaver.MOD_ID, "loom_of_time"),
-                    BlockEntityType.Builder.<LoomOfTimeBlockEntity>of(LoomOfTimeBlockEntity::new, LOOM_OF_TIME).build()
+                    FabricBlockEntityTypeBuilder.create(LoomOfTimeBlockEntity::new, LOOM_OF_TIME).build()
             );
 
     private static Block register(String name, Block block) {
