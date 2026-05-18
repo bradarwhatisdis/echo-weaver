@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " E ",
+        "EDE",
+        " E "
+    ],
+    "key": {
+        "E": "minecraft:ender_pearl",
+        "D": "minecraft:diamond"
+    },
+    "result": {
+        "id": "echoweaver:source_crystal",
+        "count": 1
+    }
+}

@@ -5,6 +5,8 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -36,12 +38,12 @@ public class LoomOfTimeBlock extends BlockWithEntity {
 
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-        if (!world.isClient) {
-            BlockEntity be = world.getBlockEntity(pos);
-            if (be instanceof LoomOfTimeBlockEntity loom) {
-                player.openHandledScreen(loom);
-            }
-        }
+        if (world.isClient) return ActionResult.SUCCESS;
+
+        BlockEntity be = world.getBlockEntity(pos);
+        if (!(be instanceof LoomOfTimeBlockEntity loom)) return ActionResult.FAIL;
+
+        loom.toggleRecording((ServerPlayerEntity) player);
         return ActionResult.SUCCESS;
     }
 }

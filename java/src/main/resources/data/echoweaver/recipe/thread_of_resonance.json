@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " E ",
+        "EGE",
+        " E "
+    ],
+    "key": {
+        "E": "minecraft:ender_pearl",
+        "G": "minecraft:glowstone_dust"
+    },
+    "result": {
+        "id": "echoweaver:thread_of_resonance",
+        "count": 2
+    }
+}
