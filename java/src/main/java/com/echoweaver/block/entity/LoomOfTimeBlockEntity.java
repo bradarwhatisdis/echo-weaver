@@ -79,13 +79,11 @@ public class LoomOfTimeBlockEntity extends BlockEntity implements Inventory, Nam
     private void spawnEcho(ServerPlayerEntity player, EchoRecording echoRecording) {
         if (!(world instanceof ServerWorld serverWorld)) return;
 
-        EchoEntity echo = ModEntities.ECHO.create(serverWorld);
-        if (echo != null) {
-            echo.setPosition(player.getX(), player.getY(), player.getZ());
-            echo.setRecording(echoRecording);
-            serverWorld.spawnEntity(echo);
-            world.playSound(null, pos, ModSounds.ECHO_ACTIVATE, SoundCategory.BLOCKS, 1.0f, 1.0f);
-        }
+        EchoEntity echo = new EchoEntity(ModEntities.ECHO, serverWorld);
+        echo.setPosition(player.getX(), player.getY(), player.getZ());
+        echo.setRecording(echoRecording);
+        serverWorld.spawnEntity(echo);
+        world.playSound(null, pos, ModSounds.ECHO_ACTIVATE, SoundCategory.BLOCKS, 1.0f, 1.0f);
     }
 
     @Override

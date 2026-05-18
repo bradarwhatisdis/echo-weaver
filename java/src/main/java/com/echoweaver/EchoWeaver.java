@@ -7,8 +7,7 @@ import com.echoweaver.item.ModItems;
 import com.echoweaver.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.server.network.ServerPlayerEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,8 +23,8 @@ public class EchoWeaver implements ModInitializer {
         ModEntities.initialize();
 
         PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
-            if (RecordingManager.isRecording(player)) {
-                RecordingManager.recordBlockBreak(player, pos, world);
+            if (player instanceof ServerPlayerEntity serverPlayer && RecordingManager.isRecording(serverPlayer)) {
+                RecordingManager.recordBlockBreak(serverPlayer, pos, world);
             }
         });
 

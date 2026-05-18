@@ -14,7 +14,6 @@ public class ModEntities {
             EntityType.Builder.create(EchoEntity::new, SpawnGroup.MISC)
                     .dimensions(0.6f, 1.8f)
                     .maxTrackingRange(10)
-                    .trackingTickInterval(2)
                     .build()
     );
 

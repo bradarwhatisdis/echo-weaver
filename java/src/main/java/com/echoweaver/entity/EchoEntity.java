@@ -8,7 +8,6 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 
@@ -20,7 +19,7 @@ public class EchoEntity extends MobEntity {
     private EchoPlayback playback;
     private boolean finished = false;
 
-    public EchoEntity(EntityType<? extends MobEntity> entityType, World world) {
+    public EchoEntity(EntityType<? extends EchoEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -66,7 +65,7 @@ public class EchoEntity extends MobEntity {
         if (nbt.contains("EchoColor")) dataTracker.set(ECHO_COLOR, nbt.getInt("EchoColor"));
         if (nbt.contains("TimeLeft")) dataTracker.set(TIME_LEFT, nbt.getInt("TimeLeft"));
         if (nbt.contains("Recording")) {
-            recording = EchoRecording.fromNbt(nbt.getCompound("Recording"), getRegistryManager());
+            recording = EchoRecording.fromNbt(nbt.getCompound("Recording"));
         }
     }
 
@@ -76,12 +75,8 @@ public class EchoEntity extends MobEntity {
         nbt.putInt("EchoColor", dataTracker.get(ECHO_COLOR));
         nbt.putInt("TimeLeft", dataTracker.get(TIME_LEFT));
         if (recording != null) {
-            nbt.put("Recording", recording.toNbt(getRegistryManager()));
+            nbt.put("Recording", recording.toNbt());
         }
     }
 
-    @Override
-    public boolean canImmediatelyDeserialize(double distanceSq) {
-        return false;
-    }
 }

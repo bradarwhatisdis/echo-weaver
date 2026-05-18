@@ -2,7 +2,6 @@ package com.echoweaver.block;
 
 import com.echoweaver.EchoWeaver;
 import com.echoweaver.block.entity.LoomOfTimeBlockEntity;
-import com.echoweaver.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntityType;
@@ -17,7 +16,12 @@ public class ModBlocks {
     public static final Block LOOM_OF_TIME = register("loom_of_time",
             new LoomOfTimeBlock(Block.Settings.create().strength(3.0f).requiresTool()));
 
-    public static BlockEntityType<LoomOfTimeBlockEntity> LOOM_OF_TIME_ENTITY;
+    public static final BlockEntityType<LoomOfTimeBlockEntity> LOOM_OF_TIME_ENTITY =
+            Registry.register(
+                    Registries.BLOCK_ENTITY_TYPE,
+                    Identifier.of(EchoWeaver.MOD_ID, "loom_of_time"),
+                    BlockEntityType.Builder.create(LoomOfTimeBlockEntity::new, LOOM_OF_TIME).build()
+            );
 
     private static Block register(String name, Block block) {
         Identifier id = Identifier.of(EchoWeaver.MOD_ID, name);
@@ -27,11 +31,6 @@ public class ModBlocks {
     }
 
     public static void initialize() {
-        LOOM_OF_TIME_ENTITY = Registry.register(
-                Registries.BLOCK_ENTITY_TYPE,
-                Identifier.of(EchoWeaver.MOD_ID, "loom_of_time"),
-                BlockEntityType.Builder.create(LoomOfTimeBlockEntity::new, LOOM_OF_TIME).build()
-        );
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
             entries.add(LOOM_OF_TIME);
         });
